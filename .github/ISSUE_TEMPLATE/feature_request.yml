@@ -1,0 +1,39 @@
+name: Feature request
+description: Suggest an idea or improvement for PhotoNest.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: Please search existing issues first — if your idea is already there, add a 👍 to it instead.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Describe what you're trying to do and what gets in the way today.
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: What would you like to happen?
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Where?
+      multiple: true
+      options:
+        - Windows app
+        - Web gallery (browser)
+        - Phone app
+    validations:
+      required: false
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Mockups, examples from other apps, screenshots.
+    validations:
+      required: false

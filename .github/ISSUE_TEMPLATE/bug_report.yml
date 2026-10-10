@@ -1,0 +1,102 @@
+name: Bug report
+description: Something in PhotoNest doesn't work as it should.
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this! Issues are **public** — please don't include
+        personal photos, passwords, pairing codes, or paths that contain your real name.
+  - type: input
+    id: version
+    attributes:
+      label: PhotoNest version
+      description: Found in Settings → About.
+      placeholder: "e.g. 1.4.2"
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Where did it happen?
+      multiple: true
+      options:
+        - Windows app
+        - Web gallery (browser)
+        - Phone app (Android)
+        - Phone app (iOS)
+        - Remote access / VPN
+        - Installer / update
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Feature area
+      options:
+        - Gallery / timeline
+        - Photo or video viewer
+        - Importing / folders / indexing
+        - People (face recognition)
+        - Search
+        - Albums / favorites / tags
+        - Memories
+        - Map / places
+        - Trash / Locked Folder
+        - Phone backup
+        - Settings / accounts
+        - Other
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open ...
+        2. Click ...
+        3. See ...
+    validations:
+      required: false
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often?
+      options:
+        - Every time
+        - Sometimes
+        - Happened once
+    validations:
+      required: false
+  - type: input
+    id: os
+    attributes:
+      label: Windows version / device
+      description: For the phone app or web gallery, also give the phone model or browser.
+      placeholder: "e.g. Windows 11 24H2 · Chrome 141 · Pixel 8 Android 16"
+    validations:
+      required: false
+  - type: input
+    id: library-size
+    attributes:
+      label: Approximate library size
+      placeholder: "e.g. 50,000 photos, 2,000 videos"
+    validations:
+      required: false
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Problem report, screenshots, recordings
+      description: |
+        If PhotoNest showed a crash report dialog, use **Save report** and drag the file here.
+        Screenshots or a short screen recording help a lot for visual problems.
+    validations:
+      required: false
